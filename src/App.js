@@ -16,7 +16,7 @@ export default function App() {
       title: `${topLevel} / ${issue}`,
       handler: function () {
         window.open(
-          `https://vendorcentral.amazon.com/hz/vendor/members/contact?expandId=${id}`,
+          `https://vendorcentral.amazon.com/hz/vendor/members/contact?issueId=${id}`,
           "_blank"
         );
       }
