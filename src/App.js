@@ -37,9 +37,15 @@ export default function App() {
   }, []);
 
   return (
-    <div>
+    <div className="container" style={{ maxWidth: "700px" }}>
       <header className="App">
         <h1>CONTACT US - CheatSheet</h1>
+        <img
+          src={
+            "https://api.netlify.com/api/v1/badges/39dbdb06-79ef-4e3e-8b24-75a6ec4f3d41/deploy-status"
+          }
+          alt="deploy badge"
+        />
         {ninjaLoaded && <h2>Hit "Cmd+K" or "Ctrl+K"</h2>}
         <h2>Automatically jump to VendorCentral</h2>
       </header>
@@ -72,13 +78,15 @@ export default function App() {
         })}
       </ul>
 
-      <textarea
-        className="form-control"
-        readOnly
-        rows={1000}
-        value={JSON.stringify(hotkeys, null, 2)}
-      />
-
+      <details>
+        <summary>raw data</summary>
+        <textarea
+          className="form-control"
+          readOnly
+          rows={1000}
+          value={JSON.stringify(hotkeys, null, 2)}
+        />
+      </details>
       <ninja-keys ref={ninjaKeys}></ninja-keys>
     </div>
   );
