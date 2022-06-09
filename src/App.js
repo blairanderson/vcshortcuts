@@ -29,6 +29,24 @@ export default function App() {
     }
   });
 
+  hotkeys.push({
+    id: "readme",
+    title: `Shortcut Readme`,
+    handler: function () {
+      window.open("https://github.com/blairanderson/vcshortcuts", "_blank");
+    }
+  });
+  hotkeys.push({
+    id: "codesandbox",
+    title: `CodeSandBox.io`,
+    handler: function () {
+      window.open(
+        "https://codesandbox.io/s/github/blairanderson/vcshortcuts?file=/src/App.js",
+        "_blank"
+      );
+    }
+  });
+
   useEffect(() => {
     if (ninjaKeys.current) {
       ninjaKeys.current.data = hotkeys;
