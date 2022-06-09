@@ -73,9 +73,12 @@ export default function App() {
 
           return (
             <li key={toplevel}>
-              <h3 style={{ marginBottom: 0, display: "inline-block" }}>
+              <p
+                className="lead"
+                style={{ marginBottom: 0, display: "inline-block" }}
+              >
                 {toplevel}
-              </h3>
+              </p>
               <ul>
                 {issues.map(({ issue, id }) => {
                   return (
