@@ -2,6 +2,10 @@ import "./styles.css";
 import "ninja-keys";
 import { useState, useRef, useEffect } from "react";
 
+function linker(id) {
+  return `https://vendorcentral.amazon.com/hz/vendor/members/contact?issueId=${id}`;
+}
+
 export default function App() {
   const ninjaKeys = useRef(null);
   const [ninjaLoaded, setLoaded] = useState(false);
@@ -15,10 +19,7 @@ export default function App() {
       id: topLevel + issue,
       title: `${topLevel} / ${issue}`,
       handler: function () {
-        window.open(
-          `https://vendorcentral.amazon.com/hz/vendor/members/contact?issueId=${id}`,
-          "_blank"
-        );
+        window.open(linker(id), "_blank");
       }
     });
     if (groups[row[0]]) {
@@ -56,7 +57,7 @@ export default function App() {
                   return (
                     <li key={id + issue}>
                       <a
-                        href={`https://vendorcentral.amazon.com/hz/vendor/members/contact?expandId=${id}`}
+                        href={linker(id)}
                         rel="noreferrer noopener"
                         target="_blank"
                       >
