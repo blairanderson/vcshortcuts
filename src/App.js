@@ -130,7 +130,7 @@ export default function App() {
             </li>
             <li className="nav-item">
               <a
-                href="https://shortcuts.shipmentbot.com"
+                href="https://markup.shipmentbot.com"
                 className="nav-link px-2 text-muted"
               >
                 Amazon Product Image Editor
