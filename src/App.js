@@ -109,6 +109,54 @@ export default function App() {
         />
       </details>
       <ninja-keys ref={ninjaKeys}></ninja-keys>
+      <div className="container mt-5">
+        <footer className="py-3 my-4">
+          <ul className="nav justify-content-center border-bottom pb-3 mb-3">
+            <li className="nav-item">
+              <a
+                href="https://www.shipmentbot.com"
+                className="nav-link px-2 text-muted"
+              >
+                ShipmentBot
+              </a>
+            </li>
+            <li className="nav-item">
+              <a
+                href="https://shortcuts.shipmentbot.com"
+                className="nav-link px-2 text-muted"
+              >
+                VendorCentral Shortcuts
+              </a>
+            </li>
+            <li className="nav-item">
+              <a
+                href="https://shortcuts.shipmentbot.com"
+                className="nav-link px-2 text-muted"
+              >
+                Amazon Product Image Editor
+              </a>
+            </li>
+            <li className="nav-item">
+              <a
+                href="https://www.andersonassociates.net"
+                className="nav-link px-2 text-muted"
+              >
+                Amazon Advertising Agency
+              </a>
+            </li>
+
+            <li className="nav-item">
+              <a
+                href="https://www.blandersoft.com"
+                className="nav-link px-2 text-muted"
+              >
+                Custom Amazon Vendor/Seller Software Tools
+              </a>
+            </li>
+          </ul>
+          <p className="text-center text-muted">© 2022 Blair Anderson</p>
+        </footer>
+      </div>
     </div>
   );
 }
